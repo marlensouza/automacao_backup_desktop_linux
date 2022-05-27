@@ -2,7 +2,7 @@
 
 #
 # Autor......: Marlen Souza
-# nome.......: automacao_backup.sh
+# nome.......: automacao_backup_desktop_linux.sh
 # versão.....: 2.0
 # descrição..: Facilitar o processo de backup de arquivos
 #
