@@ -7,9 +7,11 @@
 # descrição..: Facilitar o processo de backup de arquivos
 #
 
-if [[ -f list_backup.conf ]] 
+CONFIG_FILE="list_backup.conf"
+
+if [[ -f "$CONFIG_FILE" ]] 
 then
-  linhas=$( egrep "^[^#]" list_backup.conf | wc -l | cut -d" " -f 1 )
+  linhas=$( egrep "^[^#]" "$CONFIG_FILE" | wc -l | cut -d" " -f 1 )
   if [[ "$linhas" -lt "1" ]]
   then
     echo \
@@ -26,7 +28,7 @@ else
 # Exemplo:
 # /home/seunomedeusuario/Documentos
 # 
-' >> list_backup.conf
+' >> "$CONFIG_FILE"
   
   echo \
   "
@@ -54,4 +56,4 @@ do
       exit 2
     fi
   fi
-done < list_backup.conf
+done < "$CONFIG_FILE"
